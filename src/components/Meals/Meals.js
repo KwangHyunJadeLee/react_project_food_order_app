@@ -6,8 +6,8 @@ import MealsSummary from "./MealsSummary";
 const Meals = () => {
   return (
     <React.Fragment>
-      <MealsSummary />
-      <AvailableMeals />
+      <MealsSummary />    {/*Info component about Meals Summary*/}
+      <AvailableMeals />  {/*Data component for available Meals.*/}
     </React.Fragment>
   );
 };

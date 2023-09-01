@@ -7,6 +7,7 @@ import CartProvider from "./store/CartProvider";
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
 
+  // Those below function manage the state value about cart modal
   const showCartHandler = () => {
     setCartIsShown(true);
   };
@@ -16,7 +17,9 @@ function App() {
   };
 
   return (
-    <CartProvider>
+    // CartProvider is the Context that be used whole component in this app.
+    // and indicate items in Cart.
+    <CartProvider> 
       <Header onShowCart={showCartHandler} />
       <main>
         {cartIsShown && <Cart onHideCart={hideCartHandler} />}

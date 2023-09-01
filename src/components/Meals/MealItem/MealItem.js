@@ -4,10 +4,10 @@ import styles from "./MealItem.module.css";
 import CartContext from "../../../store/cart-context";
 
 const MealsItem = (props) => {
-  const cartCtx = useContext(CartContext);
-  const price = `$${props.price.toFixed(2)}`;
+  const cartCtx = useContext(CartContext);    // Context for Using in add event.
+  const price = `$${props.price.toFixed(2)}`; // Display only up to two decimal places.
 
-  const addToCartHandler = (amount) => {
+  const addToCartHandler = (amount) => {      //connection to context addItem method.
     cartCtx.addItem({
       id: props.id,
       name: props.name,

@@ -31,7 +31,7 @@ const DUMMY_MEALS = [
 ];
 
 const AvailableMeals = () => {
-  const mealsList = DUMMY_MEALS.map((meal) => (
+  const mealsList = DUMMY_MEALS.map((meal) => (     // Every Meals which preseted up mapping to MealItem Component.
     <MealItem
       key={meal.id}
       id={meal.id}
