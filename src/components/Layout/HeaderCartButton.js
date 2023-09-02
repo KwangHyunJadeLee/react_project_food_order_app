@@ -36,7 +36,7 @@ const HeaderCartButton = (props) => {
       clearTimeout(timer);
     };
     // Dependency would include all features value which been used in useEffect.
-  }, [items]);
+  }, [items, cartCtx.items.length]);
 
   return (
     <button
